@@ -120,7 +120,9 @@ var map = L.map('map').setView([-0.789275, 113.921327], 5);
             saveButton.className = 'popup-save-button';
             saveButton.addEventListener('click', function() {
                 var title = titleInput.value;
+                console.log(title);
                 var description = descriptionEditor.root.innerHTML;
+                console.log(description);
                 var coordinates;
                 switch (shape) {
                     case 'Polyline':
