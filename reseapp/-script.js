@@ -1,4 +1,11 @@
 var map = L.map('map').setView([-0.789275, 113.921327], 5);
+map.addControl(new L.Control.Fullscreen({
+        title: {
+            'false': 'View Fullscreen',
+            'true': 'Exit Fullscreen',
+            position: 'top right'
+        }
+    }));
     var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {});
     var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {maxZoom: 17,});
     var OpenStreetMap_CH = L.tileLayer('https://tile.osm.ch/switzerland/{z}/{x}/{y}.png', {maxZoom: 18,});
